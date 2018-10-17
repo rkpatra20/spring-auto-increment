@@ -39,7 +39,7 @@ public class CounterDao {
 	}
 
 	public void createTableIfNotExists() {
-		String query = "CREATE TABLE TBL_NEXT_INT(ID INT(11) PRIMARY KEY AUTO_INCREMENT,SYSTIME_MS BIGINT)";
+		String query = "CREATE TABLE IF NOT EXISTS TBL_NEXT_INT(ID INT(11) PRIMARY KEY AUTO_INCREMENT,SYSTIME_MS BIGINT)";
 		jdbcTemplate.execute(query);
 	}
 
